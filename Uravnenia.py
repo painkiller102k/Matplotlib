@@ -5,9 +5,9 @@ import numpy as np
 
 def plot_graph():
     try:
-        a = float(entry_a.get())
-        b = float(entry_b.get())
-        c = float(entry_c.get())
+        a = float(a.get())
+        b = float(b.get())
+        c = float(c.get())
 
         x = np.linspace(-10, 10, 400)
         y = a*x**2 + b*x + c
@@ -35,20 +35,20 @@ pealkiri.pack(pady=20)
 frame = tkinter.Frame(aken, bg='white')
 frame.pack(pady=10)
 
-entry_a = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
-entry_a.grid(row=0, column=0, padx=5)
-label1 = tkinter.Label(frame, text="x**2 +", font=("Futura", 16), bg='white', fg='green')
-label1.grid(row=0, column=1)
+a = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
+a.grid(row=0, column=0, padx=5)
+aken1 = tkinter.Label(frame, text="x**2 +", font=("Futura", 16), bg='white', fg='green')
+aken1.grid(row=0, column=1)
 
-entry_b = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
-entry_b.grid(row=0, column=2, padx=5)
-label2 = tkinter.Label(frame, text="x +", font=("Futura", 15), bg='white', fg='green')
-label2.grid(row=0, column=3)
+b = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
+b.grid(row=0, column=2, padx=5)
+aken2 = tkinter.Label(frame, text="x +", font=("Futura", 15), bg='white', fg='green')
+aken2.grid(row=0, column=3)
 
-entry_c = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
-entry_c.grid(row=0, column=4, padx=5)
-label3 = tkinter.Label(frame, text="= 0", font=("Futura", 16), bg='white', fg='green')
-label3.grid(row=0, column=5)
+c = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
+c.grid(row=0, column=4, padx=5)
+aken3 = tkinter.Label(frame, text="= 0", font=("Futura", 16), bg='white', fg='green')
+aken3.grid(row=0, column=5)
 
 nupp = tkinter.Button(frame, text="Решить", font=("Futura", 15), bg='green', fg='black', relief="ridge")
 nupp.grid(row=0, column=6, padx=10)
@@ -61,9 +61,9 @@ result_label.pack(pady=20)
 
 def solve_quadratic():
     try:
-        a = float(entry_a.get())
-        b = float(entry_b.get())
-        c = float(entry_c.get())
+        a = float(a.get())
+        b = float(b.get())
+        c = float(c.get())
 
         if a == 0:
             result_label.config(text="Это не квадратное уравнение.")
