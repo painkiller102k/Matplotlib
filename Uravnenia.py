@@ -5,9 +5,9 @@ import numpy as np
 
 def plot_graph():
     try:
-        a = float(a.get())
-        b = float(b.get())
-        c = float(c.get())
+        a = float(entry_a.get())
+        b = float(entry_b.get())
+        c = float(entry_c.get())
 
         x = np.linspace(-10, 10, 400)
         y = a*x**2 + b*x + c
@@ -35,18 +35,18 @@ pealkiri.pack(pady=20)
 frame = tkinter.Frame(aken, bg='white')
 frame.pack(pady=10)
 
-a = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
-a.grid(row=0, column=0, padx=5)
+entry_a = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
+entry_a.grid(row=0, column=0, padx=5)
 aken1 = tkinter.Label(frame, text="x**2 +", font=("Futura", 16), bg='white', fg='green')
 aken1.grid(row=0, column=1)
 
-b = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
-b.grid(row=0, column=2, padx=5)
+entry_b = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
+entry_b.grid(row=0, column=2, padx=5)
 aken2 = tkinter.Label(frame, text="x +", font=("Futura", 15), bg='white', fg='green')
 aken2.grid(row=0, column=3)
 
-c = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
-c.grid(row=0, column=4, padx=5)
+entry_c = tkinter.Entry(frame, width=5, font=("Futura", 14), bg='lightblue')
+entry_c.grid(row=0, column=4, padx=5)
 aken3 = tkinter.Label(frame, text="= 0", font=("Futura", 16), bg='white', fg='green')
 aken3.grid(row=0, column=5)
 
@@ -61,9 +61,9 @@ result_label.pack(pady=20)
 
 def solve_quadratic():
     try:
-        a = float(a.get())
-        b = float(b.get())
-        c = float(c.get())
+        a = float(entry_a.get())
+        b = float(entry_b.get())
+        c = float(entry_c.get())
 
         if a == 0:
             result_label.config(text="Это не квадратное уравнение.")
