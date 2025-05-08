@@ -8,7 +8,7 @@ import tkinter as ttk
 
 aken = tk.Tk()
 aken.title("E-posti klient")
-aken.geometry("500x320")
+aken.geometry("650x320")
 aken["background"] = "lightblue"
 
 frame = tkinter.Frame(aken, bg="lightblue")
@@ -95,5 +95,13 @@ def muuda_teema():
 button_teema = tkinter.Button(frame, text="Teema", bg="white", fg="black", relief="ridge", command=muuda_teema)
 button_teema.grid(row=4, column=1, padx=5, pady=10, sticky="e")
 
+def clear_form():
+    email_entry.delete(0, tk.END)
+    teema_entry.delete(0, tk.END)
+    kiri_entry.delete("1.0", tk.END)
+    lisa_entry.delete(0, tk.END)
+
+button_clear = ttk.Button(frame, text="Clear", bg="black", fg="black", relief="solid", command=clear_form)
+button_clear.grid(row=4, column=0, padx=5, pady=5, sticky="w")
 
 aken.mainloop()
